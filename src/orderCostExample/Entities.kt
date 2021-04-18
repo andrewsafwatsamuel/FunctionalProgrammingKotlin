@@ -4,26 +4,30 @@ typealias InvoiceConfig = Map<InvoiceChoice, (Order) -> Invoice>
 typealias ShippingConfig = Map<ShippingChoice, (Invoice) -> Shipping>
 typealias FreightConfig = Map<FreightChoice, (Shipping) -> FreightCost>
 typealias AvailabilityConfig = Map<AvailabilityChoice, (Order) -> Availability>
-typealias ShippingDateConfig = Map<ShippingDateChoice,(Availability)->ShippingDate>
+typealias ShippingDateConfig = Map<ShippingDateChoice, (Availability) -> ShippingDate>
 
 
-enum class ShippingDateChoice{
+enum class ShippingDateChoice {
     SHIP_DATE1,
     SHIP_DATE2,
 }
-enum class InvoiceChoice{
+
+enum class InvoiceChoice {
     INV1,
     INV2
 }
-enum class FreightChoice{
+
+enum class FreightChoice {
     FR1,
     FR2
 }
-enum class ShippingChoice{
+
+enum class ShippingChoice {
     SHIP1,
     SHIP2
 }
-enum class AvailabilityChoice{
+
+enum class AvailabilityChoice {
     AV1,
     AV2
 }
